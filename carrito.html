@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rey del Balón - Carrito de Compras</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Encabezado y Navegación -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">⚽ <span>Rey del Balón</span></a>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="cart-status">
+            <a href="carrito.html" class="active">🛒 Carrito (<span id="cart-count">0</span>)</a>
+            <a href="login.html" class="btn-login">Iniciar Sesión</a>
+        </div>
+    </header>
+
+    <!-- Detalle del Carrito -->
+    <main class="container">
+        <h2>Tu Carrito de Compras</h2>
+
+        <div class="cart-container" style="display: flex; gap: 2rem; margin-top: 2rem;">
+            <!-- Lista de productos cargados por JS -->
+            <div id="contenedor-carrito" style="flex: 2; background: #fff; padding: 1rem; border-radius: 8px;"></div>
+
+            <!-- Resumen de Compra -->
+            <div class="cart-summary" style="flex: 1; background: #fff; padding: 1.5rem; border-radius: 8px; height: fit-content;">
+                <h3>Resumen del Pedido</h3>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                    <span>Subtotal</span>
+                    <span id="subtotal-precio">$0</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                    <span>Envío</span>
+                    <span>Gratis</span>
+                </div>
+                <hr style="margin: 1rem 0;">
+                <div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 1.2rem; margin-bottom: 1rem;">
+                    <span>Total</span>
+                    <span id="total-precio">$0</span>
+                </div>
+
+                <button onclick="finalizarCompra()" class="btn-primary" style="width: 100%; padding: 0.8rem; margin-bottom: 0.5rem; cursor: pointer;">Proceder al Pago</button>
+                <button onclick="vaciarCarrito()" style="width: 100%; padding: 0.5rem; background: transparent; border: 1px solid #ef4444; color: #ef4444; border-radius: 4px; cursor: pointer;">Vaciar Carrito</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="footer">
+        <p>&copy; 2026 Rey del Balón - Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/productos.js"></script>
+    <script src="js/carrito.js"></script>
+</body>
+</html>
